@@ -1,0 +1,36 @@
+#!  /bin/sh
+
+#^ Functions 
+function Modefunction() {
+    modes=('Coding' 'Chillin' 'Browsing')
+    choice2=$(echo -e "${modes[*]}" | rofi -dmenu -p "Danial Options")
+    
+}
+
+function Modeupdate() {
+    choice3=$(echo -e " Gui\nTerminal" | rofi -dmenu -p "Update Method")
+    if [ "$choice3" == " Gui"]; then 
+        
+}
+
+#^ Main Menu script 
+
+options=(' Power Management\n' 'Apps Managements\n' 'Wifi Options\n' 'Modes Options\n')
+
+choice=$(echo -e "${options[*]}" | rofi -dmenu -p "Danial Options")
+
+if [ "$choice" == " Power Management" ]; then 
+    exec power-menu
+elif [ "$choice" == " Apps Managements" ]; then 
+    exec rofi -show drun -display-drun 'Bukak :' -theme danialtheme
+elif [ "$choice" == " Wifi Options" ]; then 
+    exec rofi-wifi-menu
+elif [ "$choice" == " Modes Options" ]; then 
+    Modefunction
+fi
+
+
+
+
+
+
