@@ -9,8 +9,16 @@ function Modefunction() {
 
 function Modeupdate() {
     choice3=$(echo -e " Gui\nTerminal" | rofi -dmenu -p "Update Method")
-    if [ "$choice3" == " Gui"]; then 
-        
+    if [ "$choice3" == " Gui" ]; then 
+        choice4=$(echo -e " Update Pacman Packages\nUpdate Display Manager"| rofi -dmenu -p "Danial Gui Update Options")
+        if [ "$choice4" == " Update Pacman" ]; then 
+            sudo pacman -Sy
+        elif [ "$choice4" == "Update Display Manager"]; then 
+            xmonad --restart
+        fi
+    elif [ "$choice3 == " Terminal"]
+    
+    fi
 }
 
 #^ Main Menu script 
