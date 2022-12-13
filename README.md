@@ -8,6 +8,19 @@ Bash script for daily usage of computer
 - Update System packages 
 - Update System Display Manager
 
+### Examples :
+#### App Menu
+![AppMenu](./imgs/App%20Menu.png)
+
+#### Menu
+![Menu](./imgs/Menu.png)
+
+#### Wifi Menu
+![WifiMenu](./imgs/Wifi%20Menu.png)
+
+#### Power Menu
+![PowerMenu](./imgs/Power%20Menu.png)
+
 ### Installation 
 #### Linux
 ```sh 
