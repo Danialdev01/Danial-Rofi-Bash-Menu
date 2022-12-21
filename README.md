@@ -1,4 +1,4 @@
-# Danial Rofi Bash Menu 
+# Minimalist Rofi Bash Menu 
 
 Bash script for daily usage of computer 
 ### Features : 
