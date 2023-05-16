@@ -21,13 +21,30 @@ Bash script for daily usage of computer
 #### Power Menu
 ![PowerMenu](./imgs/Power%20Menu.png)
 
+#### Project Menu
+![Alt text](imgs/Project%20Menu.png)
+
 ### Installation 
 #### Linux
 ```sh 
-git clone https://github.com/Danialdev01/Danial-Rofi-Bash-Menu &&
-cd Danial-Rofi-Bash-Menu &&
-chmod +x danial-menu-manager && chmod +x power-menu && chmod +x rofi-wifi-menu &&
-sudo mv danial-menu-manager /usr/bin && sudo mv power-menu /usr/bin && sudo mv rofi-wifi-menu /usr/bin
+git clone https://github.com/Danialdev01/Danial-Rofi-Bash-Menu
+```
+```sh
+cd Danial-Rofi-Bash-Menu
+```
+```sh
+chmod +x danial-menu-manager && 
+chmod +x power-menu && 
+chmod +x rofi-wifi-menu &&
+chmod +x project-management 
+```
+<p>you can replace  <code>/usr/bin</code>  to any location you place your executable</p>
+
+```sh
+sudo mv danial-menu-manager /usr/bin && 
+sudo mv power-menu /usr/bin && 
+sudo mv rofi-wifi-menu /usr/bin &&
+sudo mv project-management /usr/bin
 ```
 ### Dependencies
 - rofi 

@@ -2,28 +2,28 @@
 
 #^ Functions 
 function Modefunction() {
-    modes=('Coding' 'Chillin' 'Browsing')
+    modes=(' Coding\n' 'Chillin\n' 'Browsing\n')
     choice2=$(echo -e "${modes[*]}" | rofi -dmenu -p "Danial Options")
     
 }
 
-function Modeupdate() {
-    choice3=$(echo -e " Gui\nTerminal" | rofi -dmenu -p "Update Method")
-    if [ "$choice3" == " Gui" ]; then 
-        choice4=$(echo -e " Update Pacman Packages\nUpdate Display Manager"| rofi -dmenu -p "Danial Gui Update Options")
-        if [ "$choice4" == " Update Pacman" ]; then 
-            sudo pacman -Sy
-        elif [ "$choice4" == "Update Display Manager"]; then 
-            xmonad --restart
-        fi
-    elif [ "$choice3 == " Terminal"]
+# function Modeupdate() {
+#     choice3=$(echo -e " Gui\nTerminal" | rofi -dmenu -p "Update Method")
+#     if [ "$choice3" == " Gui" ]; then 
+#         choice4=$(echo -e " Update Pacman Packages\nUpdate Display Manager"| rofi -dmenu -p "Danial Gui Update Options")
+#         if [ "$choice4" == " Update Pacman" ]; then 
+#             sudo pacman -Sy
+#         elif [ "$choice4" == "Update Display Manager"]; then 
+#             xmonad --restart
+#         fi
+#     elif [ "$choice3 == " Terminal"]
     
-    fi
-}
+#     fi
+# }
 
 #^ Main Menu script 
 
-options=(' Power Management\n' 'Apps Managements\n' 'Wifi Options\n' 'Modes Options\n')
+options=(' Power Management\n' 'Apps Managements\n' 'Wifi Options\n' 'New Project\n')
 
 choice=$(echo -e "${options[*]}" | rofi -dmenu -p "Danial Options")
 
@@ -33,8 +33,8 @@ elif [ "$choice" == " Apps Managements" ]; then
     exec rofi -show drun -display-drun 'Bukak :' -theme danialtheme
 elif [ "$choice" == " Wifi Options" ]; then 
     exec rofi-wifi-menu
-elif [ "$choice" == " Modes Options" ]; then 
-    Modefunction
+elif [ "$choice" == " New Project" ]; then 
+    exec project-management
 fi
 
 

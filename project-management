@@ -1,0 +1,23 @@
+#!/bin/bash
+
+options=(' New Normal\n' 'New Git\n' 'New PHP\n' 'New Test\n')
+
+choice=$(echo -e "${options[*]}" | rofi -dmenu -p "Project Menu")
+
+if [ "$choice" == " New Git" ]; then 
+    fileName=$(rofi -dmenu -p "Folder name" )
+    mkdir /mnt/Database/Development/$fileName
+    code /mnt/Database/Development/$fileName
+elif [ "$choice" == " New PHP" ]; then 
+    fileName=$(rofi -dmenu -p "Folder name" )
+    mkdir /srv/http/$fileName
+    code /srv/http/$fileName
+elif [ "$choice" == " New Normal" ]; then 
+    fileName=$(rofi -dmenu -p "Folder name" )
+    mkdir /mnt/Database/Development/AB-Non-Git/$fileName
+    code /mnt/Database/Development/AB-Non-Git/$fileName
+elif [ "$choice" == " New Test" ]; then 
+    fileName=$(rofi -dmenu -p "Folder name" )
+    mkdir /mnt/Database/Development/AB-Non-Git/test/$fileName
+    code /mnt/Database/Development/AB-Non-Git/test/$fileName
+fi
